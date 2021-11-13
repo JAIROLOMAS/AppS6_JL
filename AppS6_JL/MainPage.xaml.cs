@@ -34,6 +34,7 @@ namespace AppS6_JL
                 parametros.Add("apellido", txtApellido.Text);
                 parametros.Add("edad", txtEdad.Text);
                
+
                 cliente.UploadValues("http://192.168.1.5/moviles/post.php", "POST", parametros);
                 await DisplayAlert("alerta", "Dato Ingresadocorrectamente", "ok");
           
