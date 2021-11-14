@@ -13,11 +13,7 @@ namespace AppS6_JL
 {
     public partial class MainPage : ContentPage
     {
-        //private const string Url = "http:///192.168.1.4/moviles/post.php";
-       // private readonly HttpClient client = new HttpClient();
-       // private ObservableCollection<AppS6_JL.Ws.Datos> _post;
-
-        public MainPage()
+       public MainPage()
         {
             InitializeComponent();
         }
@@ -49,7 +45,10 @@ namespace AppS6_JL
 
         private async void btnRegresar_Clicked(object sender, EventArgs e)
         {
-            await Navigation.PushAsync(new MainPage ());
+            var mensaje = "Alerta Toast XAMARIN";
+            DependencyService.Get<MensajeA>().longAlert(mensaje);
+
+           // await Navigation.PushAsync(new MainPage ());
 
         }
     }
