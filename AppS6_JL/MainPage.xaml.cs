@@ -43,35 +43,35 @@ namespace AppS6_JL
 
         }
 
-        private async void btnRegresar_Clicked(object sender, EventArgs e)
+        private void btnRegresar_Clicked(object sender, EventArgs e)
         {
             try
             {
                 //permite abrir la ventana dos
-                await Navigation.PushAsync(new MainPage());
+                Navigation.PushAsync(new MainPage());
             }
 
 
             catch (Exception ex)
             {
-                await DisplayAlert("Ventana 2", ex.Message, "OK");
+                 DisplayAlert("Ventana 2", ex.Message, "OK");
 
             }
 
         }
 
-        private async void btnActualizar_Clicked(object sender, EventArgs e)
+        private void btnActualizar_Clicked(object sender, EventArgs e)
         {
             try
             {
                 //permite abrir la ventana dos
-                await Navigation.PushAsync(new Actualizar());
+                Navigation.PushAsync(new Actualizar());
             }
 
 
             catch (Exception ex)
             {
-                await DisplayAlert("Ventana 2", ex.Message, "OK");
+                DisplayAlert("Ventana 2", ex.Message, "OK");
 
             }
             
