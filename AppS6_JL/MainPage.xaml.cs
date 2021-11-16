@@ -45,10 +45,37 @@ namespace AppS6_JL
 
         private async void btnRegresar_Clicked(object sender, EventArgs e)
         {
-            var mensaje = "Alerta Toast XAMARIN";
-            DependencyService.Get<MensajeA>().longAlert(mensaje);
+           
+            await Navigation.PushAsync(new MainPage ());
 
-           // await Navigation.PushAsync(new MainPage ());
+        }
+
+        private async void btnActualizar_Clicked(object sender, EventArgs e)
+        {
+            await Navigation.PushAsync(new Actualizar());
+        }
+
+        private async void btnEliminar_Clicked(object sender, EventArgs e)
+        {
+            try
+            {
+
+                WebClient cliente = new WebClient();
+                var parametros = new System.Collections.Specialized.NameValueCollection();
+
+                parametros.Add("codigo", txtCodigo.Text);
+               
+
+                cliente.UploadValues("http://192.168.1.5/moviles/post.php ? codigo= " + Int32.Parse(txtCodigo.Text), "DELETE", parametros);
+                await DisplayAlert("alerta", "Dato Ingresadocorrectamente", "ok");
+
+            }
+            catch (Exception ex)
+            {
+                await DisplayAlert("alerta", "Error" + ex.Message, "ok");
+
+            }
+
 
         }
     }
