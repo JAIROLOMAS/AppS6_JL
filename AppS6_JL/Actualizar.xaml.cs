@@ -32,9 +32,9 @@ namespace AppS6_JL
                 parametros1.Add("edad", txtEdadActualizar.Text);
 
 
-                cliente.UploadValues("http://192.168.1.5/moviles/post.php ? codigo= " + Int32.Parse(txtCodigoActualizar.Text) + "&" + "nombre=" + txtNombreActualizar.Text + "&" + "apellido=" + txtApellidoActualizar.Text + "&" + "edad=" + Int32.Parse(txtEdadActualizar), "PUT", parametros1);
+                cliente.UploadValues("http://192.168.1.5/moviles/post.php ? codigo= " + Int32.Parse(txtCodigoActualizar.Text) + "&" + "nombre=" + txtNombreActualizar.Text + "&" + "apellido=" + txtApellidoActualizar.Text + "&" + "edad=" + Int32.Parse(txtEdadActualizar.Text), "PUT", parametros1);
 
-                await DisplayAlert("alerta", "Dato Ingresadocorrectamente", "ok");
+                await DisplayAlert("alerta", "Datos Actualizados Correctamente", "ok");
 
             }
             catch (Exception ex)
