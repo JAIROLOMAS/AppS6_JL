@@ -26,6 +26,7 @@
 
 
                 <Button Grid.Row="0" Grid.Column="0" Text="Actualizar Datos" x:Name="btnActualizarDatos" Clicked="btnActualizarDatos_Clicked"/>
+                <Button Grid.Row="0" Grid.Column="1" Text="Regresar" x:Name="btnRegresar" Clicked="btnRegresar_Clicked"/>
                  
            </Grid>  
        </StackLayout>
