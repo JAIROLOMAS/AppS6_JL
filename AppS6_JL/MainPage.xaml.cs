@@ -66,7 +66,7 @@ namespace AppS6_JL
                 parametros.Add("codigo", txtCodigo.Text);
                
 
-                cliente.UploadValues("http://192.168.1.5/moviles/post.php ? codigo= " + Int32.Parse(txtCodigo.Text), "DELETE", parametros);
+                cliente.UploadValues("http://192.168.1.8/moviles/post.php ? codigo= " + Int32.Parse(txtCodigo.Text), "DELETE", parametros);
                 await DisplayAlert("alerta", "Dato Ingresadocorrectamente", "ok");
 
             }
