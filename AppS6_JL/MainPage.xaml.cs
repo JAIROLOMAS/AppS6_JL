@@ -32,7 +32,7 @@ namespace AppS6_JL
                
 
                 cliente.UploadValues("http://192.168.1.8/moviles/post.php", "POST", parametros);
-                DisplayAlert("alerta", "Dato Ingresadocorrectamente", "ok");
+                DisplayAlert("alerta", "Datos Ingresados Correctamente", "ok");
           
             }
             catch (Exception ex)
@@ -70,7 +70,7 @@ namespace AppS6_JL
                
 
                 cliente.UploadValues("http://192.168.1.8/moviles/post.php ? codigo= " + Int32.Parse(txtCodigo.Text), "DELETE", parametros);
-                 DisplayAlert("alerta", "Dato Eliminado Correctamente", "ok");
+                 DisplayAlert("alerta", "Datos Eliminados Correctamente", "ok");
 
             }
             catch (Exception ex)
