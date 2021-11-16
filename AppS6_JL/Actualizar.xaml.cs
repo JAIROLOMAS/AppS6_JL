@@ -45,21 +45,10 @@ namespace AppS6_JL
 
         }
 
-        private async void btnRegresar_Clicked(object sender, EventArgs e)
+        private void btnRegresar_Clicked(object sender, EventArgs e)
         {
-            try
-            {
-                //permite abrir la ventana dos
-                await Navigation.PushAsync(new MainPage());
-            }
-
-            
-            catch (Exception ex)
-            {
-                await DisplayAlert("Ventana 2", ex.Message, "OK");
-
-            }
-            
-        }
+            //permite abrir la ventana dos
+            Navigation.PushAsync(new MainPage());
+         }
     }
 }
