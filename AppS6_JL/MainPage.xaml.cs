@@ -18,7 +18,7 @@ namespace AppS6_JL
             InitializeComponent();
         }
 
-        private async void btnIngresar_Clicked(object sender, EventArgs e)
+        private  void btnIngresar_Clicked(object sender, EventArgs e)
         {
             try {
 
@@ -32,12 +32,12 @@ namespace AppS6_JL
                
 
                 cliente.UploadValues("http://192.168.1.5/moviles/post.php", "POST", parametros);
-                await DisplayAlert("alerta", "Dato Ingresadocorrectamente", "ok");
+                DisplayAlert("alerta", "Dato Ingresadocorrectamente", "ok");
           
             }
             catch (Exception ex)
             {
-              await DisplayAlert("alerta", "Error"+ ex.Message, "ok");
+               DisplayAlert("alerta", "Error"+ ex.Message, "ok");
 
             }
 
@@ -58,7 +58,7 @@ namespace AppS6_JL
                       
         }
 
-        private async void btnEliminar_Clicked(object sender, EventArgs e)
+        private void btnEliminar_Clicked(object sender, EventArgs e)
         {
             try
             {
@@ -70,12 +70,12 @@ namespace AppS6_JL
                
 
                 cliente.UploadValues("http://192.168.1.8/moviles/post.php ? codigo= " + Int32.Parse(txtCodigo.Text), "DELETE", parametros);
-                await DisplayAlert("alerta", "Dato Ingresadocorrectamente", "ok");
+                 DisplayAlert("alerta", "Dato Eliminado Correctamente", "ok");
 
             }
             catch (Exception ex)
             {
-                await DisplayAlert("alerta", "Error" + ex.Message, "ok");
+                 DisplayAlert("alerta", "Error" + ex.Message, "ok");
 
             }
 

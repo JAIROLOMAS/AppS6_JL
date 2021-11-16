@@ -10,7 +10,8 @@ namespace AppS6_JL
         {
             InitializeComponent();
 
-            MainPage = new MainPage();
+            //MainPage = new MainPage();
+            MainPage = new NavigationPage(new Actualizar());
         }
 
         protected override void OnStart()

@@ -18,7 +18,7 @@ namespace AppS6_JL
             InitializeComponent();
         }
 
-        private async void btnActualizarDatos_Clicked(object sender, EventArgs e)
+        private void btnActualizarDatos_Clicked(object sender, EventArgs e)
         {
             try
             {
@@ -34,12 +34,12 @@ namespace AppS6_JL
 
                 cliente.UploadValues("http://192.168.1.8/moviles/post.php ? codigo= " + Int32.Parse(txtCodigoActualizar.Text) + "&" + "nombre=" + txtNombreActualizar.Text + "&" + "apellido=" + txtApellidoActualizar.Text + "&" + "edad=" + Int32.Parse(txtEdadActualizar.Text), "PUT", parametros1);
 
-                await DisplayAlert("alerta", "Datos Actualizados Correctamente", "ok");
+                 DisplayAlert("alerta", "Datos Actualizados Correctamente", "ok");
 
             }
             catch (Exception ex)
             {
-                await DisplayAlert("alerta", "Error" + ex.Message, "ok");
+                DisplayAlert("alerta", "Error" + ex.Message, "ok");
 
             }
 
