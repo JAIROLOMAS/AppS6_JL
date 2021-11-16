@@ -18,6 +18,7 @@ namespace AppS6_JL
             InitializeComponent();
         }
 
+
         private void btnIngresar_Clicked(object sender, EventArgs e)
         {
             try {
