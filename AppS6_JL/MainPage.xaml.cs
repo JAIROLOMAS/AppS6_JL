@@ -18,7 +18,7 @@ namespace AppS6_JL
             InitializeComponent();
         }
 
-        private  void btnIngresar_Clicked(object sender, EventArgs e)
+        private void btnIngresar_Clicked(object sender, EventArgs e)
         {
             try {
 
@@ -31,7 +31,7 @@ namespace AppS6_JL
                 parametros.Add("edad", txtEdad.Text);
                
 
-                cliente.UploadValues("http://192.168.1.5/moviles/post.php", "POST", parametros);
+                cliente.UploadValues("http://192.168.1.8/moviles/post.php", "POST", parametros);
                 DisplayAlert("alerta", "Dato Ingresadocorrectamente", "ok");
           
             }
